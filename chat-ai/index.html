@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversar com Hana</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <script>
+    // --- Restored API Key as per user request ---
+    window.process = window.process || {};
+    window.process.env = window.process.env || {};
+    window.process.env.API_KEY = "AIzaSyDf0cHH8re7TtPxLAaHP6J-4_rqRpVSTZQ";
+  </script>
+
+
+
+  <script type="importmap">
+    {
+      "imports": {
+        "@google/generative-ai": "https://esm.run/@google/generative-ai"
+      }
+    }
+  </script>
+  <script type="module" src="index.js"></script>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <div id="app-container">
+    <header>
+      <img src="./assets/hana_avatar-sbsvEX1V-sbsvEX1V.png" alt="Hana Joken's avatar" id="hana-avatar">
+      <h1>Conversar com Hana</h1>
+      <div class="mode-toggle-container">
+        <span class="mode-label">Normal</span>
+        <label class="switch">
+          <input type="checkbox" id="mode-toggle">
+          <span class="slider round"></span>
+        </label>
+        <span class="mode-label">Entrevista</span>
+      </div>
+    </header>
+    <main>
+      <div id="chat-log" aria-live="polite" role="log">
+        <!-- Initial bot message will be populated by index.js -->
+      </div>
+      <form id="chat-form" aria-label="Chat input form">
+        <input type="text" id="message-input" placeholder="Envie um sinal para Hana..." aria-label="Sua mensagem"
+          autocomplete="off">
+        <button type="submit" id="send-button" aria-label="Enviar mensagem">Enviar Sinal</button>
+      </form>
+    </main>
+    <footer>
+      <!-- Memory controls removed as per request -->
+      <p id="system-status-footer">SYSTEM ONLINE // MILITECH</p>
+    </footer>
+    <div id="heart-monitor-container">
+      <div id="monitor-line-left" class="monitor-line"></div>
+      <div id="monitor-line-right" class="monitor-line"></div>
+    </div>
+  </div>
+</body>
+
+</html>

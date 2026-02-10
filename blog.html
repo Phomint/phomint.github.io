@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Phomint</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/blog/favicon.png">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+
+    <!-- Social Sharing Meta Tags -->
+    <meta property="og:title" content="Blog - Phomint">
+    <meta property="og:description" content="Explorando tecnologia, ciência e o futuro.">
+    <meta property="og:image" content="https://phomint.github.io/assets/blog/math.png">
+    <meta property="og:url" content="https://phomint.github.io/blog.html">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog - Phomint">
+    <meta name="twitter:description" content="Explorando tecnologia, ciência e o futuro.">
+    <meta name="twitter:image" content="https://phomint.github.io/assets/blog/math.png">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+
+<body>
+    <canvas id="star-canvas"></canvas>
+    <header>
+        <a href="index.html" class="logo-link">
+            <svg class="logo-svg" viewBox="0 0 100 100">
+                <rect x="20" y="10" width="60" height="80" rx="30" ry="30" fill="none" stroke="#6a1b9a" stroke-width="8"
+                    opacity="0.8" />
+                <path d="M 50 25 Q 52 48 75 50 Q 52 52 50 75 Q 48 52 25 50 Q 48 48 50 25" fill="#6a1b9a" />
+            </svg>
+            <span class="logo-name"></span>
+        </a>
+        <nav>
+            <a href="index.html" class="nav-link" data-i18n="nav.curriculum">Currículo</a>
+            <span class="nav-separator">|</span>
+            <a href="projects.html" class="nav-link" data-i18n="nav.projects">Projetos</a>
+            <span class="nav-separator">|</span>
+            <a href="blog.html" class="nav-link active" data-i18n="nav.blog">Blog</a>
+        </nav>
+        <div class="header-right">
+            <div class="language-selector">
+                <button class="lang-btn" data-lang="pt" aria-label="Português">
+                    <span class="flag">🇧🇷</span>
+                </button>
+                <div class="lang-divider">|</div>
+                <button class="lang-btn" data-lang="en" aria-label="English">
+                    <span class="flag">🇺🇸</span>
+                </button>
+            </div>
+            <select class="mobile-lang-selector" aria-label="Selecionar idioma">
+                <option value="pt">🇧🇷 PT</option>
+                <option value="en">🇺🇸 EN</option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+        <div id="blog-header-section" class="section-container">
+            <div class="section-header">
+                <span class="hero-label" data-i18n="blog.hero_label">Ciência</span>
+                <blockquote class="hero-quote-container">
+                    <button class="quote-nav prev-quote" aria-label="Anterior">&lsaquo;</button>
+                    <h1 class="hero-title">
+                        &ldquo;<span data-i18n="blog.hero_quote">O aspecto mais triste da vida agora é que a ciência
+                            reúne conhecimento mais rápido do que a sociedade reúne sabedoria</span>&rdquo;
+                    </h1>
+                    <cite class="hero-author" data-i18n="blog.hero_author">Isaac Asimov</cite>
+                    <button class="quote-nav next-quote" aria-label="Próximo">&rsaquo;</button>
+                </blockquote>
+            </div>
+
+            <nav class="blog-categories" style="margin-bottom: 2rem;">
+                <button class="category-btn active" data-category="all" data-i18n="blog.cat_all">Todos</button>
+                <button class="category-btn" data-category="biology" data-i18n="blog.cat_biology">Biologia</button>
+                <button class="category-btn" data-category="future" data-i18n="blog.cat_future">Futuro</button>
+                <button class="category-btn" data-category="cs" data-i18n="blog.cat_cs">Computação</button>
+                <button class="category-btn" data-category="physics" data-i18n="blog.cat_physics">Física</button>
+            </nav>
+        </div>
+
+        <div id="blog-content" class="blog-grid">
+            <div class="star-loader" aria-label="Carregando...">
+                <svg class="star-svg big-star" viewBox="0 0 100 100">
+                    <path d="M 50 25 Q 52 48 75 50 Q 52 52 50 75 Q 48 52 25 50 Q 48 48 50 25" fill="#6a1b9a" />
+                </svg>
+                <div class="orbit-container">
+                    <svg class="star-svg small-star" viewBox="0 0 100 100">
+                        <path d="M 50 25 Q 52 48 75 50 Q 52 52 50 75 Q 48 52 25 50 Q 48 48 50 25" fill="#6a1b9a" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div id="pagination" class="pagination-container"></div>
+    </main>
+
+    <a href="chat-ai/index.html?mode=interview" class="floating-chat-button">
+        <div class="button-content">
+            <img src="chat-ai/hana_avatar.png" alt="Chat AI">
+            <span data-i18n="common.lets_chat">Fazer uma pequena entrevista?</span>
+        </div>
+    </a>
+    <script src="js/translations.js"></script>
+    <script src="js/i18n.js"></script>
+    <script type="module" src="js/main.js"></script>
+    <script src="blog.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,188 @@
+{
+    "profile": {
+        "name": "Patrick Amaral",
+        "recent_role": "Cientista de Dados PL na Clickbus",
+        "location": "Brasil (Florianópolis)",
+        "contact": {
+            "phone": "+55 14 99120-2930",
+            "email": "patrick.dev.atom@gmail.com"
+        }
+    },
+    "professional_experience": [
+        {
+            "company": "Clickbus",
+            "role": "Cientista de Dados PL",
+            "period": "Jan 2023 - Fev 2025",
+            "description": "Desenvolvimento de modelos preditivos, otimização de algoritmos de busca e implementação de estratégias de precificação dinâmica com impacto direto nos resultados de negócio."
+        },
+        {
+            "company": "Clickbus",
+            "role": "Analista de Dados PL",
+            "period": "Out 2021 - Dez 2023"
+        },
+        {
+            "company": "Webby Internet",
+            "role": "Analista de Dados JR",
+            "period": "Out 2019 - Ago 2021"
+        },
+        {
+            "company": "SOS Tecnologia",
+            "role": "Técnico em Informática",
+            "period": "Set 2017 - Out 2018",
+            "description": "Reparo de celulares, notebooks e computadores."
+        },
+        {
+            "company": "FATEC Ourinhos",
+            "role": "Estágio em SEO",
+            "period": "Set 2017 - Nov 2017"
+        }
+    ],
+    "education": [
+        {
+            "institution": "FATEC Ourinhos",
+            "degree": "Ciência de Dados",
+            "period": "2020 - 2023"
+        },
+        {
+            "institution": "Udacity",
+            "degree": "Nanodegree em Análise de Dados",
+            "period": "2019"
+        },
+        {
+            "institution": "FATEC Ourinhos",
+            "degree": "Análise e Desenvolvimento de Sistemas",
+            "period": "2015 - 2018"
+        },
+        {
+            "institution": "ETEC",
+            "degree": "Técnico em Informática",
+            "period": "2014 - 2015"
+        }
+    ],
+    "technical_skills": {
+        "languages": [
+            "Python (Expert)",
+            "SQL (Advanced)",
+            "Spark"
+        ],
+        "ai_ml": [
+            "PyTorch",
+            "Scikit-learn",
+            "Modelos Preditivos"
+        ],
+        "cloud": [
+            "AWS (S3, SageMaker, Lambda)"
+        ],
+        "data_viz": [
+            "Tableau (Expert)",
+            "AWS Quicksight (Expert)",
+            "PowerBI (Intermediate)",
+            "Streamlit (Intermediate)"
+        ],
+        "tools": [
+            "Docker",
+            "Git",
+            "Github",
+            "Pandas",
+            "NumPy",
+            "PySpark"
+        ],
+        "web": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Django",
+            "Flask"
+        ],
+        "others": [
+            "Excel (Advanced)",
+            "Google Sheets (Advanced)",
+            "Java",
+            "C++"
+        ]
+    },
+    "soft_skills": [
+        "Data Storytelling",
+        "Pensamento Critico",
+        "Curiosidade",
+        "Ética",
+        "Responsabilidade",
+        "Adaptabilidade"
+    ],
+    "interests": [
+        "Ciência e Tecnologia",
+        "Educação",
+        "Meio Ambiente",
+        "Saúde",
+        "Serviços Sociais"
+    ],
+    "certifications": [
+        {
+            "name": "AWS Machine Learning Foundations",
+            "issuer": "Udacity",
+            "id": "LLQTXPRF"
+        },
+        {
+            "name": "Introduction to the Tidyverse",
+            "issuer": "DataCamp",
+            "date": "Oct 2021",
+            "id": "2aa1a8d88f4068d507befbb00fa6554413e164b9"
+        },
+        {
+            "name": "SQL (Basic) Certificate",
+            "issuer": "HackerRank",
+            "date": "Jul 2021",
+            "id": "69fffe6c397a"
+        },
+        {
+            "name": "Formação: Machine Learning",
+            "issuer": "Alura",
+            "date": "Jan 2021",
+            "id": "cadde9b9-0503-4aa1-abe8-3b081ae2536f"
+        },
+        {
+            "name": "Formação: Power BI",
+            "issuer": "Alura",
+            "date": "Jan 2021",
+            "id": "d7cd5217-bef6-4834-9e0c-86f5715265f5"
+        },
+        {
+            "name": "Engenharia de dados: Conceitos para Gestores",
+            "issuer": "Alura",
+            "date": "Jan 2021",
+            "id": "15dc5350-c826-460b-9334-8a9ccb3ec03e"
+        },
+        {
+            "name": "Consultas SQL: Avançando no SQL com MySQL",
+            "issuer": "Alura",
+            "date": "Jan 2021",
+            "id": "0020cc03-e9b8-4ba6-97a7-0443e89e5429"
+        },
+        {
+            "name": "Data Analyst",
+            "issuer": "Udacity",
+            "date": "Aug 2019",
+            "id": "CPDJC9TD"
+        },
+        {
+            "name": "Fundamentos de Data Science I",
+            "issuer": "Udacity Brasil",
+            "date": "Feb 2019",
+            "id": "C5QEMS"
+        },
+        {
+            "name": "IT Essentials",
+            "issuer": "Cisco Networking Academy",
+            "date": "Dec 2015"
+        },
+        {
+            "name": "Construindo Aplicações Web com o Novo Angular (4, 5 e 6)",
+            "issuer": "Udemy",
+            "date": "Jan 2019",
+            "id": "UC-KFOEVVBT"
+        }
+    ],
+    "additional_data": {
+        "netrunner_summary": "Patrick é um netrunner de alto nível no mundo dos dados. Ele transforma logs brutos em ouro estratégico. Se você precisa de alguém que saiba hackear problemas complexos de negócio usando matemática e código, ele é o cara. Ele tem uma visão clara de como escalar soluções em nuvem e manter a latência baixa."
+    }
+}

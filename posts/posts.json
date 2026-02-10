@@ -1,0 +1,22 @@
+[
+    {
+        "name": "o-caos.md",
+        "path": "posts/{lang}/o-caos.md",
+        "categories": [
+            "cs",
+            "physics"
+        ],
+        "date": "2026-02-06",
+        "type": "local"
+    },
+    {
+        "name": "o-desenvolvimento-da-agi.md",
+        "path": "posts/{lang}/o-desenvolvimento-da-agi.md",
+        "categories": [
+            "cs",
+            "future"
+        ],
+        "date": "2026-02-09",
+        "type": "local"
+    }
+]
