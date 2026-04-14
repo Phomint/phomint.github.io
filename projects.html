@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/blog/favicon.png">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/generative-ai": "https://esm.run/@google/generative-ai"
+        }
+      }
+    </script>
+</head>
+
+<body>
+    <canvas id="star-canvas"></canvas>
+    <header>
+        <a href="index.html" class="logo-link">
+            <svg class="logo-svg" viewBox="0 0 100 100">
+                <!-- Rounded "0" Border (taller than wide) -->
+                <rect x="20" y="10" width="60" height="80" rx="30" ry="30" fill="none" stroke="#6a1b9a" stroke-width="8"
+                    opacity="0.8" />
+                <!-- Gemini Star -->
+                <path d="M 50 25 Q 52 48 75 50 Q 52 52 50 75 Q 48 52 25 50 Q 48 48 50 25" fill="#6a1b9a" />
+            </svg>
+            <span class="logo-name"></span>
+        </a>
+        <nav>
+            <a href="index.html" class="nav-link" data-i18n="nav.curriculum">Currículo</a>
+            <span class="nav-separator">|</span>
+            <a href="projects.html" class="nav-link active" data-i18n="nav.projects">Projetos</a>
+            <span class="nav-separator">|</span>
+            <a href="blog.html" class="nav-link" data-i18n="nav.blog">Blog</a>
+        </nav>
+        <div class="header-right">
+            <div class="language-selector">
+                <button class="lang-btn" data-lang="pt" aria-label="Português">
+                    <span class="flag">🇧🇷</span>
+                </button>
+                <div class="lang-divider">|</div>
+                <button class="lang-btn" data-lang="en" aria-label="English">
+                    <span class="flag">🇺🇸</span>
+                </button>
+            </div>
+            <select class="mobile-lang-selector" aria-label="Selecionar idioma">
+                <option value="pt">🇧🇷 PT</option>
+                <option value="en">🇺🇸 EN</option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+        <div class="projects-header">
+            <h1 data-i18n="nav.projects">Projetos</h1>
+            <div class="search-container">
+                <input type="text" id="project-search" placeholder="Pesquisar..." aria-label="Pesquisar projetos"
+                    data-i18n="common.search_placeholder">
+                <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20">
+                    <path
+                        d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                        fill="currentColor" />
+                </svg>
+            </div>
+        </div>
+        <div class="projects-container">
+            <div class="star-loader" aria-label="Carregando...">
+                <svg class="star-svg big-star" viewBox="0 0 100 100">
+                    <!-- Gemini Path -->
+                    <path d="M 50 25 Q 52 48 75 50 Q 52 52 50 75 Q 48 52 25 50 Q 48 48 50 25" fill="#6a1b9a" />
+                </svg>
+                <div class="orbit-container">
+                    <svg class="star-svg small-star" viewBox="0 0 100 100">
+                        <!-- Gemini Path -->
+                        <path d="M 50 25 Q 52 48 75 50 Q 52 52 50 75 Q 48 52 25 50 Q 48 48 50 25" fill="#6a1b9a" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div id="pagination" class="pagination-container"></div>
+    </main>
+    <a href="chat-ai/index.html?mode=interview" class="floating-chat-button">
+        <div class="button-content">
+            <img src="chat-ai/hana_avatar.png" alt="Chat AI">
+            <span data-i18n="common.lets_chat">Fazer uma pequena entrevista?</span>
+        </div>
+    </a>
+
+    <!-- Project Details Modal -->
+    <div id="project-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <div id="modal-body" class="modal-body">
+                <div class="modal-loader">
+                    <div class="star-loader">
+                        <svg class="star-svg big-star" viewBox="0 0 100 100">
+                            <path d="M 50 25 Q 52 48 75 50 Q 52 52 50 75 Q 48 52 25 50 Q 48 48 50 25" fill="#6a1b9a" />
+                        </svg>
+                    </div>
+                    <p data-i18n="common.loading_readme">Carregando README...</p>
+                </div>
+                <div id="readme-content" class="readme-content"></div>
+            </div>
+            <div class="modal-footer">
+                <span id="translation-status" class="translation-status"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/translations.js"></script>
+    <script src="js/i18n.js"></script>
+    <script type="module" src="js/main.js"></script>
+    <script>
+        // Mocking process.env for the browser (sharing the same key as the chat AI)
+        window.process = window.process || {};
+        window.process.env = window.process.env || {};
+        window.process.env.API_KEY = "AIzaSyDf0cHH8re7TtPxLAaHP6J-4_rqRpVSTZQ";
+    </script>
+</body>
+
+</html>
